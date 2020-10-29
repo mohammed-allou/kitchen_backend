@@ -22,7 +22,29 @@ router.post('/', function (req, res) {
             res.status(400).json(err);
         }
         else {
-            res.json(req.body);
+            res.status(201).json();
+        }
+    });
+});
+
+router.put('/:id', function (req, res) {
+    ProductService.updateProduct(req.params.id, req.body, function (err, count) {
+        if (err) {
+            res.status(400).json(err);
+        }
+        else {
+            res.status(200).json();
+        }
+    });
+});
+
+router.delete('/:id', function (req, res) {
+    ProductService.deleteProduct(req.params.id, function (err, count) {
+        if (err) {
+            res.status(400).json(err);
+        }
+        else {
+            res.status(204).json();
         }
     });
 });
