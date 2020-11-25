@@ -6,6 +6,7 @@
 - VueJs (Vue Router, VueX, Vuetify)
 - Axios (call API)
 - MySql
+- Jest
 
 ## How to deploy on local
 
@@ -53,4 +54,10 @@ yarn install
 ```
 ```
 yarn serve
+```
+
+4. Start test.
+
+```
+npm test
 ```
